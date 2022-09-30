@@ -7,6 +7,20 @@ const Home: NextPage = () => {
       <Head>
         <title>Fedi's Portfolio</title>
       </Head>
+
+      {/* Header */}
+
+      {/* Hero */}
+
+      {/* About */}
+
+      {/* Experience */}
+
+      {/* Skills */}
+
+      {/* Projects */}
+
+      {/* Contact Me */}
     </div>
   )
 }
