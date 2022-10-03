@@ -19,11 +19,11 @@ function Projects({}: Props) {
       }}
       className='h-screen relative flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'
     >
-      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+      <h3 className='absolute top-24 md:top-20 2xl:top-16 uppercase tracking-[20px] text-gray-500 text-2xl'>
         Projects
       </h3>
 
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 pt-10'>
+      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
         {Array.isArray(projects)
           ? (
             projects.map((project, i) => (
@@ -65,7 +65,7 @@ function Projects({}: Props) {
         }
       </div>
 
-      <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[400px] -skew-y-12' />
+      <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[390px] -skew-y-12' />
     </motion.div>
   )
 }
