@@ -29,14 +29,14 @@ export interface Technology extends SanityBody {
   _type: 'skill';
   image: Image;
   progress: numebr;
-  itle: string;
+  title: string;
 }
 
 export interface Skill extends SanityBody {
   _type: 'skill';
   image: Image;
   progress: numebr;
-  itle: string;
+  title: string;
 }
 
 export interface Experience extends SanityBody {
