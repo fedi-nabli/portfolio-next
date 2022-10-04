@@ -30,7 +30,7 @@ const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
         <title>Fedi's Portfolio</title>
       </Head>
 
-      <Header />
+      <Header socials={socials} />
 
       <section id='hero' className='snap-start'>
         <Hero />
