@@ -46,7 +46,7 @@ export default {
     },
     {
       name: 'address',
-      name: 'Address',
+      title: 'Address',
       type: 'string'
     },
     {
