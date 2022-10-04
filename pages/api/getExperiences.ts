@@ -4,7 +4,10 @@ import { sanityClient } from '../../sanity'
 import { Experience } from '../../typings'
 
 const query = groq`
-  *[_type == "social"]
+  *[_type == "experience"] {
+    ...,
+    technologies[]->
+  }
 `
 
 type Data = {
