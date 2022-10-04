@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{
@@ -36,27 +40,14 @@ function About({}: Props) {
         viewport={{
           once: true
         }}
-        src='https://cdn.sanity.io/images/ltuexkre/production/ac8058b25cc880765f6549dd27223349f37a7c2f-1173x1458.jpg'
+        src={urlFor(pageInfo?.profilePic).url()}
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
       />
 
       <div className='space-y-10 px-0 md:px-10'>
         <h4 className='text-4xl font-semibold'>Here is a <span className='underline decoration-[#F7AB0A]/50'>little</span> background</h4>
         <p className='text-base'>
-          I'm Sonny. 💯 You might also know me as PAPA React! I'll be your coach
-          & mentor inside the PAPAFAM, here's a little bit about me... I've been
-          coding for over 10 years now. As a Full Stack developer I've worked
-          both with startups and large corporations to help build & scale their
-          companies. Along the journey I realised my passion existed in helping
-          others excel and persue their dreams as upcoming developers. 🌟 With
-          this passion, I have now trained thousand's of developers across the
-          globe. Through live coaching sessions on YouTube, I have accumulated
-          deveral MILLLIONS views demonstarting how to apply developer skills in a
-          range of cool builds and challenges. I deliver REAL VALUE by teaching
-          REAL WORLD projects to help students enter the world of web development.
-          You'll get hands-on experience and learn the skills that are required to
-          succeed in real-world in this community. And if that's not enough, I have
-          cloned most of the applications you have used in your life!
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>
